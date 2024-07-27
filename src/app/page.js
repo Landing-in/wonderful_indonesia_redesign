@@ -1,7 +1,11 @@
+import HeroSection from "@/components/HeroSection";
+import CarouselSection from "@/components/Carousel";
+
 export default function Home() {
-  return (
-   <div>
-     <p className="text-4xl font-bold text-amber-400">Hello World</p>
-   </div>
-  );
+    return (
+        <div className="overflow-hidden">
+            <HeroSection/>
+            <CarouselSection/>
+        </div>
+    );
 }

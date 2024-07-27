@@ -8,8 +8,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-
+        'hero-pattern': "url('/public/assets/bg-image1.png')"
       },
+      colors: {
+        primary: '#222831',
+      }
     },
   },
   plugins: [],

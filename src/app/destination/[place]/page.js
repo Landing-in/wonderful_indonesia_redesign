@@ -8,7 +8,7 @@ export default function PlacePage() {
   const { place } = params;
 
   return (
-    <div>
+    <div className="font-bold text-primary">
       <h1>Kota : {place}</h1>
     </div>
   );
