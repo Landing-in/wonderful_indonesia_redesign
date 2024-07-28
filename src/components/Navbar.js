@@ -21,7 +21,7 @@ function Navbar() {
                     {
                         menuLink.map((menu) => {
                             return (
-                                <li>
+                                <li className="hover:text-primary transition-all ease-in duration-300">
                                     <a href={menu.link}>{menu.name}</a>
                                 </li>
                             )
