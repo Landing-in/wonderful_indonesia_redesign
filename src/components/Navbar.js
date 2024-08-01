@@ -4,15 +4,15 @@ import MobileMenu from "@/components/MobileMenu";
 
 
 export const menuLink = [
-    {name: "Home", link: "/home"},
-    {name: "Destination", link: "/home"},
+    {name: "Home", link: "/"},
+    {name: "Destination", link: "/destination"},
     {name: "About", link: "/home"},
-    {name: "Event", link: "/home"},
+    {name: "Event", link: "#event"},
 ]
 
 function Navbar() {
     return (
-        <nav className="max-w-[1440px] p-4 mx-auto flex justify-between items-center overflow-hidden">
+        <nav className="md:max-w-[1440px] p-4 mt-5 mx-auto flex justify-between items-center overflow-hidden">
             {/*LOGO*/}
             <Logo/>
             {/*<MobileMenu/>*/}
@@ -21,7 +21,7 @@ function Navbar() {
                     {
                         menuLink.map((menu) => {
                             return (
-                                <li className="hover:text-primary transition-all ease-in duration-300">
+                                <li key={menu.name} className="hover:text-primary transition-all ease-in duration-300">
                                     <a href={menu.link}>{menu.name}</a>
                                 </li>
                             )
