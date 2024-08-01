@@ -3,7 +3,7 @@ import CarouselSection from "@/components/Carousel";
 
 export default function Home() {
     return (
-        <div className="overflow-hidden">
+        <div className="overflow-hidden mx-auto">
             <HeroSection/>
             <CarouselSection/>
         </div>

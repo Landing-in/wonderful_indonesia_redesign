@@ -12,7 +12,13 @@ module.exports = {
       },
       colors: {
         primary: '#222831',
-      }
+      },
+      screens: {
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1366px', // Menambahkan breakpoint khusus untuk 1366px
+        '2xl': '1920px',
+      },
     },
   },
   plugins: [],
