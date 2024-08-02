@@ -15,7 +15,6 @@ function Navbar() {
         <nav className="md:max-w-[1440px] p-4 mt-5 mx-auto flex justify-between items-center overflow-hidden">
             {/*LOGO*/}
             <Logo/>
-            {/*<MobileMenu/>*/}
             <div>
                 <ul className="flex justify-between space-x-10 font-semibold text-lg">
                     {
