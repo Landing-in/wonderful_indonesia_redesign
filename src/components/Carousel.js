@@ -1,11 +1,9 @@
 "use client"
 import React from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
-import {Navigation, Pagination, EffectCoverflow} from 'swiper/modules';
+import {EffectCoverflow} from 'swiper/modules';
 import {Autoplay} from "swiper/modules";
 import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
 import Image from 'next/image';
 import image1 from '/public/assets/bromo3.jpg';
@@ -31,16 +29,15 @@ const Carousel = () => {
     ];
 
     return (
-        <div className="py-12 max-w-6xl mx-auto min-h-screen px-4">
+        <div className="py-12 max-w-7xl mx-auto min-h-screen">
             <h2 className="text-center text-3xl md:text-3xl xl:text-5xl font-bold mb-20 text-white">Most Popular</h2>
+            <div className="flex justify-center items-center mx-auto">
             <Swiper
-                modules={[Autoplay, Navigation, Pagination, EffectCoverflow]}
+                modules={[Autoplay, EffectCoverflow]}
                 spaceBetween={0}
                 slidesPerView={1}
                 centeredSlides={true}
                 loop={true}
-                navigation
-                pagination={{clickable: true}}
                 effect="coverflow"
                 autoplay={{
                     delay: 3000,
@@ -49,7 +46,7 @@ const Carousel = () => {
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,
-                    depth: 100,
+                    depth: 200,
                     modifier: 1,
                     slideShadows: true,
                     scale: 1,
@@ -74,7 +71,7 @@ const Carousel = () => {
                 }}
             >
                 {images.map((image, index) => (
-                    <SwiperSlide key={index} className="flex justify-center">
+                    <SwiperSlide key={index} className="flex justify-center mx-auto">
                         <div
                             className="relative rounded-xl overflow-hidden shadow-lg w-full h-[546px] md:w-96 md:h-[580px]">
                             <Image src={image.src} alt={image.title}
@@ -88,6 +85,7 @@ const Carousel = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
+            </div>
         </div>
     );
 };
